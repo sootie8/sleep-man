@@ -1,0 +1,11 @@
+[Unit]
+Description=Example systemd service.
+After=suspend.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /opt/sleep-man/log-resume-time.sh
+
+[Install]
+WantedBy=multi-user.target
+
