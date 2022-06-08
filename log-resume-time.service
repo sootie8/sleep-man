@@ -5,6 +5,7 @@ After=suspend.target
 [Service]
 Type=simple
 ExecStart=/bin/bash /opt/sleep-man/log-resume-time.sh
+StandardOutput=null
 
 [Install]
 WantedBy=multi-user.target

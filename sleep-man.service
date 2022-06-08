@@ -5,6 +5,7 @@ Description=Example systemd service.
 Type=simple
 ExecStart=/bin/bash /opt/sleep-man/sleep-man.sh
 Restart=always
+StandardOutput=null
 
 [Install]
 WantedBy=multi-user.target
