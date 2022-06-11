@@ -1,12 +1,12 @@
 [Unit]
 Description=Example systemd service.
-After=suspend.target
+After=network-online.target
+Wants=network-online.target
 
 [Service]
 Type=simple
-ExecStart=/bin/bash /opt/sleep-man/log-resume-time.sh
+ExecStart=/bin/bash /opt/sleep-man/log-last-arp.sh
 StandardOutput=null
 
 [Install]
 WantedBy=multi-user.target
-
